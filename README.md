@@ -6,14 +6,19 @@ npm install
 ```
 
 ## Run the server
-``node app.js``
+```node app.js
+```
 
 ## Run e2e tests
 Playwright tests:
-``npm run test:playwright``
+```
+npm run test:playwright
+```
 
 Cypress tests:
-``npm run test:cypress``
+```
+npm run test:cypress
+```
 
 ## Resources
 ```
