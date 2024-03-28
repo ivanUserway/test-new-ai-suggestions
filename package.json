@@ -5,7 +5,6 @@
     "dev": "node app.js",
     "test:cypress": "cypress run --config-file cypress/config/cypress.config.js --browser=chrome --e2e",
     "test:playwright": "npx playwright test",
-    "prepare": "aws codeartifact login --tool npm --repository userway-npm --domain userway --domain-owner --region us-west-2 384064702811 --profile userway-codeartifact-profile"
   },
   "devDependencies": {
     "cypress": "^13.3.3",
