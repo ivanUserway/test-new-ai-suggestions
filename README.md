@@ -1,7 +1,6 @@
 # Test-Website-1: Mikro
 ## Setting up the project
 ```
-npm run prepare
 npm install
 ```
 

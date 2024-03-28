@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "node app.js",
     "test:cypress": "cypress run --config-file cypress/config/cypress.config.js --browser=chrome --e2e",
-    "test:playwright": "npx playwright test",
+    "test:playwright": "npx playwright test"
   },
   "devDependencies": {
     "cypress": "^13.3.3",
