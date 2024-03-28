@@ -7,12 +7,11 @@
     "test:playwright": "npx playwright test",
     "prepare": "aws codeartifact login --tool npm --repository userway-npm --domain userway --domain-owner --region us-west-2 384064702811 --profile userway-codeartifact-profile"
   },
-  "dependencies": {
-    "cypress": "^13.3.3",
-    "express": "^4.19.2"
-  },
   "devDependencies": {
+    "cypress": "^13.3.3",
+    "express": "^4.19.2",
     "@playwright/test": "^1.42.1",
-    "@types/node": "^20.11.30"
+    "@types/node": "^20.11.30",
+    "typescript": "^5.0.2"
   }
 }
