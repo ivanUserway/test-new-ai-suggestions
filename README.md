@@ -6,7 +6,8 @@ npm install
 ```
 
 ## Run the server
-```node app.js
+```
+node app.js
 ```
 
 ## Run e2e tests
