@@ -1,0 +1,17 @@
+{
+  "name": "test-website-1-mirko",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "node app.js",
+    "test:cypress": "cypress run --config-file cypress/config/cypress.config.js --browser=chrome --e2e",
+    "test:playwright": "npx playwright test"
+  },
+  "dependencies": {
+    "cypress": "^13.3.3",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.30"
+  }
+}
