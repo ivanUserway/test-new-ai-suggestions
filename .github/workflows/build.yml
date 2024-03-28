@@ -32,4 +32,5 @@ jobs:
           npm run test:cypress
       - name: Run Playwright tests
         run: |
+          npx playwright install   
           npm run test:playwright
