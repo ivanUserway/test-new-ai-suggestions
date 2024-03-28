@@ -32,5 +32,5 @@ jobs:
           npm run test:cypress
       - name: Run Playwright tests
         run: |
-          npx playwright install --with-deps chromium
+          npx playwright install chromium
           npm run test:playwright
