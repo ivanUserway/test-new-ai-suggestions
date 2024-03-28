@@ -1,9 +1,9 @@
 name: Node.js CI
 on:
   pull_request:
-    branches: ["main"]
+    branches: ['main']
   push:
-    branches: ["main"]
+    branches: ['main']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,5 +32,5 @@ jobs:
           npm run test:cypress
       - name: Run Playwright tests
         run: |
-          npx playwright install   
+          npx playwright install --with-deps chromium
           npm run test:playwright
