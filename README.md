@@ -2,6 +2,7 @@
 ## Setting up the project
 ```
 npm install
+npx playwright install
 ```
 
 ## Run the server
