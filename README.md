@@ -2,21 +2,25 @@
 ## Setting up the project
 ```
 npm install
-npx playwright install
 ```
 
 ## Run the server
 ```
-node app.js
+npm run dev
 ```
-
+The app will be available at http://localhost:5173/
 ## Run e2e tests
-Playwright tests:
+#### Playwright tests
+Install chromium:
+```
+npx playwright install chromium
+```
+Run the tests:
 ```
 npm run test:playwright
 ```
 
-Cypress tests:
+#### Cypress tests
 ```
 npm run test:cypress
 ```
