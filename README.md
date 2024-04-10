@@ -8,7 +8,7 @@ npm install
 ```
 npm run dev
 ```
-The app will be available at http://localhost:5173/
+The app will be available at http://localhost:1342/
 ## Run e2e tests
 #### Playwright tests
 Install chromium:
