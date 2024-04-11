@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "node app.js",
-    "test:cypress": "cypress run --config-file cypress/config/cypress.config.js --browser=chrome --e2e",
+    "test:cypress": "cypress run --config-file cypress/config/cypress.config.js --browser=electron --e2e",
     "test:playwright": "npx playwright test"
   },
   "devDependencies": {
