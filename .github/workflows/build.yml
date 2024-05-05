@@ -11,17 +11,28 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - name: Install npm packages
         run: |
           npm install
           nohup npm run dev > output.log 2>&1 &
           sleep 5
           curl -I http://localhost:1342/
+
       - name: Run Cypress tests
         run: |
           npm run test:cypress
+
       - name: Run Playwright tests
         run: |
           npx playwright install chromium
           npm run test:playwright
+
+      - name: Prepare java tests
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+      - name: JUnit 5 tests
+        run: cd ${GITHUB_WORKSPACE}/selenium-java && ./mvnw test --batch-mode --file pom.xml
