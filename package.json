@@ -11,6 +11,7 @@
     "express": "^4.19.2",
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.30",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "cypress-each": "1.14.0"
   }
 }
