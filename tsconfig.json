@@ -11,12 +11,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "types": [
+      "cypress",
+      "@userway/a11y-cypress",
+      "playwright",
+      "@userway/app-playwright",
+      "puppeteer",
+      "@userway/app-puppeteer"
+    ],
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "types": ["cypress"]
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "cypress", "playwright"]
+  "include": ["src", "cypress", "playwright", "puppeteer"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

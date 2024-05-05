@@ -29,6 +29,10 @@ jobs:
           npx playwright install chromium
           npm run test:playwright
 
+      - name: Run Puppeteer tests
+        run: |
+          npm run test:puppeteer
+
       - name: Prepare java tests
         uses: actions/setup-java@v4
         with:
