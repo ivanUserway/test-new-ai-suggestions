@@ -845,6 +845,109 @@
       </div>
     </section>
 
+    <!-- Critical Issues Section -->
+    <section class="critical-issues-section py-5" id="critical-issues-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Critical Issues</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <!-- Missing Alt Text -->
+            <img src="./assets/images/critical-1.jpg" />
+            <img src="./assets/images/critical-2.jpg" />
+            <img src="./assets/images/critical-3.jpg" />
+
+            <!-- Color Contrast Issues -->
+            <div style="background-color: #ff0000; color: #ff0000">
+              <p>This text has poor color contrast.</p>
+            </div>
+
+            <!-- Missing Form Labels -->
+            <form action="#" method="post">
+              <input type="text" placeholder="Enter name" id="name" />
+              <input type="email" placeholder="Enter email" id="email" />
+              <input type="password" placeholder="Enter password" id="password" />
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- Non-Descriptive Links -->
+            <a href="https://example.com">Click here</a>
+            <a href="https://example.com">Read more</a>
+            <a href="https://example.com">Learn more</a>
+
+            <!-- Inaccessible Tables -->
+            <table>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+              </tr>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+              </tr>
+            </table>
+
+            <!-- Keyboard Trap -->
+            <div onfocus="this.style.border='2px solid blue'" tabindex="0">
+              <a href="#" onfocus="document.getElementById('keyboard-trap').focus()">Keyboard Trap</a>
+              <a href="#" id="keyboard-trap">Trap Link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Another Problematic Section -->
+    <section class="problematic-section text-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Problematic Section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <!-- Flashing Content -->
+            <div style="animation: flash 1s infinite">
+              <p>Flashing content can cause seizures.</p>
+            </div>
+
+            <!-- Missing Role Attributes for ARIA -->
+            <div aria-hidden="true">
+              <button onclick="alert('Inaccessible Button')">Inaccessible Button</button>
+            </div>
+
+            <!-- Non-Descriptive Button Text -->
+            <button onclick="alert('Details')">Details</button>
+
+            <!-- Form Without Submit Button -->
+            <form action="#" method="post">
+              <input type="text" placeholder="Enter something" />
+            </form>
+
+            <!-- Complex Images Without Alt Text -->
+            <img src="./assets/images/complex-1.jpg" />
+            <img src="./assets/images/complex-2.jpg" />
+            <img src="./assets/images/complex-3.jpg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS for Flashing Content -->
+    <style>
+      @keyframes flash {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+
     <!-- Scripts -->
     <script src="./js/bootstrap.min.js"></script>
     <!-- Bootstrap framework -->
