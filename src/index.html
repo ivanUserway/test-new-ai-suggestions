@@ -892,7 +892,164 @@
       </div>
     </section>
 
-    <!-- CSS for Flashing Content -->
+    <!-- Serious WCAG 2.1 Issues Section -->
+    <section class="serious-issues-section py-5" id="serious-issues-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>Serious WCAG 2.1 Issues</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <!-- Missing Alt Text -->
+            <img src="./assets/images/serious-1.jpg" />
+            <img src="./assets/images/serious-2.jpg" />
+            <img src="./assets/images/serious-3.jpg" />
+
+            <!-- Color Contrast Issues -->
+            <div style="background-color: #000000; color: #222222">
+              <p>This text has poor color contrast.</p>
+            </div>
+
+            <!-- Missing Form Labels -->
+            <form action="#" method="post">
+              <input type="text" placeholder="Enter name" id="name" />
+              <input type="email" placeholder="Enter email" id="email" />
+              <input type="password" placeholder="Enter password" id="password" />
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- Non-Descriptive Links -->
+            <a href="https://example.com">Click here</a>
+            <a href="https://example.com">Read more</a>
+            <a href="https://example.com">Learn more</a>
+
+            <!-- Inaccessible Tables -->
+            <table>
+              <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+              </tr>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+              </tr>
+            </table>
+
+            <!-- Keyboard Trap -->
+            <div onfocus="this.style.border='2px solid blue'" tabindex="0">
+              <a href="#" onfocus="document.getElementById('keyboard-trap').focus()">Keyboard Trap</a>
+              <a href="#" id="keyboard-trap">Trap Link</a>
+            </div>
+
+            <!-- Flashing Content -->
+            <div style="animation: flash 0.5s infinite">
+              <p>Flashing content can cause seizures.</p>
+            </div>
+
+            <!-- Missing Role Attributes for ARIA -->
+            <div aria-hidden="true">
+              <button onclick="alert('Inaccessible Button')">Inaccessible Button</button>
+            </div>
+
+            <!-- Non-Descriptive Button Text -->
+            <button onclick="alert('Details')">Details</button>
+
+            <!-- Form Without Submit Button -->
+            <form action="#" method="post">
+              <input type="text" placeholder="Enter something" />
+            </form>
+
+            <!-- Complex Images Without Alt Text -->
+            <img src="./assets/images/complex-1.jpg" />
+            <img src="./assets/images/complex-2.jpg" />
+            <img src="./assets/images/complex-3.jpg" />
+
+            <!-- Audio Content Without Controls -->
+            <audio src="audio/example.mp3" autoplay></audio>
+
+            <!-- Video Without Captions -->
+            <video src="video/example.mp4" autoplay></video>
+
+            <!-- Moving Content Without Controls -->
+            <marquee behavior="scroll" direction="left">This is a scrolling text without controls.</marquee>
+
+            <!-- Incorrect Use of ARIA -->
+            <div role="button" aria-pressed="true" tabindex="0">
+              <p>This div is incorrectly using ARIA roles.</p>
+            </div>
+
+            <!-- Image with Text as Part of the Image -->
+            <img src="./assets/images/image-with-text.jpg" />
+
+            <!-- Missing ARIA Live Region for Dynamic Content -->
+            <div id="dynamic-content">This content updates dynamically without announcing to screen readers.</div>
+
+            <!-- Missing Skip Navigation Link -->
+            <nav>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Text as Images Without Alternative Text -->
+            <img src="./assets/images/text-as-image.jpg" />
+
+            <!-- Audio Content with Auto Play Without Controls -->
+            <audio src="audio/auto-play.mp3" autoplay></audio>
+
+            <!-- Video Content with Auto Play Without Captions -->
+            <video src="video/auto-play.mp4" autoplay></video>
+
+            <!-- Missing Labels for Input Fields -->
+            <form action="#">
+              <input type="text" name="username" placeholder="Username" />
+              <input type="password" name="password" placeholder="Password" />
+              <button type="submit">Login</button>
+            </form>
+
+            <!-- Links with No Focus Indication -->
+            <a href="https://example.com" style="outline: none">Focus Link</a>
+            <a href="https://example.com" style="outline: none">No Focus Link</a>
+
+            <!-- Content that Moves Automatically -->
+            <div class="marquee-container" style="overflow: hidden; white-space: nowrap">
+              <div class="marquee" style="display: inline-block; animation: marquee 10s linear infinite">
+                <p>This is moving text without any controls to stop it.</p>
+              </div>
+            </div>
+
+            <!-- Elements with Low Contrast Ratios -->
+            <div style="background-color: #e0e0e0; color: #c0c0c0">
+              <p>Low contrast text example.</p>
+            </div>
+
+            <!-- Non-Descriptive Form Elements -->
+            <form action="#">
+              <input type="text" placeholder="Text Input" />
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- Interactive Elements Not Keyboard Accessible -->
+            <div onclick="alert('Div Clicked')" style="cursor: pointer">
+              <p>This div is not keyboard accessible.</p>
+            </div>
+
+            <!-- Non-semantic Elements Used for Structure -->
+            <div>
+              <b>Non-semantic text structure example.</b>
+            </div>
+
+            <!-- Interactive Elements Without Visible Focus -->
+            <a href="#" style="outline: none">Link without visible focus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS for Flashing Content and Moving Text -->
     <style>
       @keyframes flash {
         0% {
@@ -903,6 +1060,14 @@
         }
         100% {
           opacity: 1;
+        }
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(100%);
+        }
+        to {
+          transform: translateX(-100%);
         }
       }
     </style>
