@@ -783,83 +783,21 @@
     </button>
     <!-- end of back to top button -->
 
-    <!-- New Section with Accessibility Issues -->
-    <section class="new-section py-5" id="new-section">
+    <!-- WCAG 2.1 Issues Section -->
+    <section class="wcag-issues-section py-5" id="wcag-issues-section">
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h2>Our Team</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="team-member" tabindex="0">
-              <img src="./assets/images/team-1.jpg" />
-              <h4>John Doe</h4>
-              <p>CEO</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-            </div>
-            <div class="team-member" tabindex="0">
-              <img src="./assets/images/team-2.jpg" />
-              <h4>Jane Smith</h4>
-              <p>CTO</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-            </div>
-            <div class="team-member" tabindex="0">
-              <img src="./assets/images/team-3.jpg" />
-              <h4>Jim Brown</h4>
-              <p>CFO</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-            </div>
-            <a href="https://example.com" tabindex="-1">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Another Section with Issues -->
-    <section class="another-section text-light py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>Our Projects</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div class="project">
-              <img src="./assets/images/project-1.jpg" alt="Project Image 1" />
-              <h4>Project One</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-              <button onclick="alert('Project One Details')" aria-label="View Details">View Details</button>
-            </div>
-            <div class="project">
-              <img src="./assets/images/project-2.jpg" alt="Project Image 2" />
-              <h4>Project Two</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-              <button onclick="alert('Project Two Details')" aria-label="View Details">View Details</button>
-            </div>
-            <div class="project">
-              <img src="./assets/images/project-3.jpg" alt="Project Image 3" />
-              <h4>Project Three</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae urna in nisi interdum malesuada.</p>
-              <button onclick="alert('Project Three Details')" aria-label="View Details">View Details</button>
-            </div>
-            <a href="https://example.com" aria-label="Learn More">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Critical Issues Section -->
-    <section class="critical-issues-section py-5" id="critical-issues-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>Critical Issues</h2>
+            <h2>WCAG 2.1 Issues</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <!-- Missing Alt Text -->
-            <img src="./assets/images/critical-1.jpg" />
-            <img src="./assets/images/critical-2.jpg" />
-            <img src="./assets/images/critical-3.jpg" />
+            <img src="./assets/images/wcag-1.jpg" />
+            <img src="./assets/images/wcag-2.jpg" />
+            <img src="./assets/images/wcag-3.jpg" />
 
             <!-- Color Contrast Issues -->
-            <div style="background-color: #ff0000; color: #ff0000">
+            <div style="background-color: #000000; color: #333333">
               <p>This text has poor color contrast.</p>
             </div>
 
@@ -893,18 +831,6 @@
               <a href="#" onfocus="document.getElementById('keyboard-trap').focus()">Keyboard Trap</a>
               <a href="#" id="keyboard-trap">Trap Link</a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Another Problematic Section -->
-    <section class="problematic-section text-light py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <h2>Problematic Section</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
             <!-- Flashing Content -->
             <div style="animation: flash 1s infinite">
@@ -928,6 +854,39 @@
             <img src="./assets/images/complex-1.jpg" />
             <img src="./assets/images/complex-2.jpg" />
             <img src="./assets/images/complex-3.jpg" />
+
+            <!-- Audio Content Without Controls -->
+            <audio src="audio/example.mp3" autoplay></audio>
+
+            <!-- Video Without Captions -->
+            <video src="video/example.mp4" autoplay></video>
+
+            <!-- Moving Content Without Controls -->
+            <marquee behavior="scroll" direction="left">This is a scrolling text without controls.</marquee>
+
+            <!-- Incorrect Use of ARIA -->
+            <div role="button" aria-pressed="true" tabindex="0">
+              <p>This div is incorrectly using ARIA roles.</p>
+            </div>
+
+            <!-- Image with Text as Part of the Image -->
+            <img src="./assets/images/image-with-text.jpg" />
+
+            <!-- Missing ARIA Live Region for Dynamic Content -->
+            <div id="dynamic-content">This content updates dynamically without announcing to screen readers.</div>
+
+            <!-- Missing Skip Navigation Link -->
+            <nav>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Text as Images Without Alternative Text -->
+            <img src="./assets/images/text-as-image.jpg" />
           </div>
         </div>
       </div>
