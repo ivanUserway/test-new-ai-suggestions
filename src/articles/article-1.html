@@ -719,6 +719,130 @@
       </div>
     </section>
 
+    <!-- New WCAG 2.1 Issues Section -->
+    <section class="new-wcag-issues-section py-5" id="new-wcag-issues-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h2>New WCAG 2.1 Issues</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <!-- Missing Alt Text -->
+            <img src="./assets/images/new-wcag-1.jpg" />
+            <img src="./assets/images/new-wcag-2.jpg" />
+            <img src="./assets/images/new-wcag-3.jpg" />
+
+            <!-- Poor Color Contrast -->
+            <div style="background-color: #1a1a1a; color: #1a1a1a">
+              <p>This text has poor color contrast.</p>
+            </div>
+
+            <!-- Images of Text -->
+            <img src="./assets/images/image-of-text.jpg" />
+
+            <!-- Missing Form Labels -->
+            <form action="#" method="post">
+              <input type="text" placeholder="Enter your name" id="name" />
+              <input type="email" placeholder="Enter your email" id="email" />
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- Non-Descriptive Links -->
+            <a href="https://example.com">Click here</a>
+            <a href="https://example.com">More info</a>
+            <a href="https://example.com">Details</a>
+
+            <!-- Tables Without Header Scope -->
+            <table>
+              <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+              </tr>
+              <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+              </tr>
+            </table>
+
+            <!-- No ARIA Landmarks -->
+            <div>
+              <p>Content without ARIA landmarks.</p>
+            </div>
+
+            <!-- Flashing Content -->
+            <div style="animation: flash 0.3s infinite">
+              <p>Flashing content can cause seizures.</p>
+            </div>
+
+            <!-- Auto-Playing Audio -->
+            <audio src="audio/autoplay-example.mp3" autoplay></audio>
+
+            <!-- No Focus Indication -->
+            <a href="https://example.com" style="outline: none">Link without focus indication</a>
+
+            <!-- Redundant ARIA Roles -->
+            <div role="presentation">
+              <p>This div has a redundant ARIA role.</p>
+            </div>
+
+            <!-- Missing ARIA Live Region for Dynamic Content -->
+            <div id="live-region">
+              <p>This content updates dynamically without announcing to screen readers.</p>
+            </div>
+
+            <!-- Inaccessible Custom Controls -->
+            <div class="custom-control" onclick="alert('Control clicked!')" tabindex="0">
+              <p>Custom control without proper keyboard access.</p>
+            </div>
+
+            <!-- Inconsistent Navigation Order -->
+            <nav>
+              <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+            </nav>
+
+            <!-- Non-Semantic HTML Elements -->
+            <div>
+              <b>Using bold for headings instead of semantic elements.</b>
+            </div>
+
+            <!-- Content Hidden from Assistive Technologies -->
+            <div style="display: none">
+              <p>This content is not accessible to screen readers.</p>
+            </div>
+
+            <!-- Forms Without Fieldsets and Legends -->
+            <form action="#" method="post">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- CAPTCHA Without Accessible Alternatives -->
+            <form action="#" method="post">
+              <label for="captcha">Enter the text shown:</label>
+              <img src="captcha.jpg" alt="CAPTCHA" />
+              <input type="text" id="captcha" name="captcha" />
+              <button type="submit">Submit</button>
+            </form>
+
+            <!-- No Skip Link -->
+            <a href="#main-content">Skip to main content</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CSS for Flashing Content and Moving Text -->
     <style>
       @keyframes flash {
