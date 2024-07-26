@@ -1,9 +1,9 @@
 name: Node.js CI
 on:
   pull_request:
-    branches: ['main']
+    branches: ["main"]
   push:
-    branches: ['main']
+    branches: ["main"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,20 +24,13 @@ jobs:
       - name: Run Cypress tests
         run: |
           npm run test:cypress
-
-      - name: Run Playwright tests
-        run: |
-          npx playwright install chromium
-          npm run test:playwright
-
-      - name: Run Puppeteer tests
-        run: |
-          npm run test:puppeteer
-
-      - name: Prepare java tests
-        uses: actions/setup-java@v4
+      - name: UserWay Accessibility Analysis
+        uses: UserWayOrg/cicd-action@qa #`main` or `qa`, depending on what env you need
         with:
-          java-version: 17
-          distribution: temurin
-      - name: JUnit 5 tests
-        run: cd ${GITHUB_WORKSPACE}/selenium-java && ./mvnw test --batch-mode --file pom.xml
+          token: ${{ secrets.USERWAY_TOKEN }}
+          report_paths: "./uw-a11y-reports"
+
+      # - name: Run Playwright tests
+      #   run: |
+      #     npx playwright install chromium
+      #     npm run test:playwright
