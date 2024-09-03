@@ -1,8 +1,20 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
+import { setupUserway, userwayAnalysis } from "@userway/a11y-playwright";
 
-test('should have the right text in the headline', async ({ page }) => {
-  await page.goto('/');
+test("should have the right text in the headline", async ({ page }) => {
+  await page.goto("/");
 
-  await expect(page.locator('.headline')).toContainText(/Best Broadband/);
-  await expect(page.locator('.headline')).toContainText(/Internet Plans For You/);
+  await expect(page.locator(".headline")).toContainText(/Best Broadband/);
+  await expect(page.locator(".headline")).toContainText(
+    /Internet Plans For You/
+  );
+  setupUserway({
+    screenshots: true,
+    printViolationsTable: false,
+  });
+  await userwayAnalysis(page, {
+    includeBestPractices: true,
+    switchOff: false,
+    strict: false,
+  });
 });

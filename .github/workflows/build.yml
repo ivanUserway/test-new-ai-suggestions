@@ -21,16 +21,12 @@ jobs:
           sleep 5
           curl -I http://localhost:1342/
 
-      - name: Run Cypress tests
+      - name: Run Playwright tests
         run: |
-          npm run test:cypress
+          npx playwright install chromium
+          npm run test:playwright
       - name: UserWay Accessibility Analysis
         uses: UserWayOrg/cicd-action@qa #`main` or `qa`, depending on what env you need
         with:
           token: ${{ secrets.USERWAY_TOKEN }}
           report_paths: "./uw-a11y-reports"
-
-      # - name: Run Playwright tests
-      #   run: |
-      #     npx playwright install chromium
-      #     npm run test:playwright
