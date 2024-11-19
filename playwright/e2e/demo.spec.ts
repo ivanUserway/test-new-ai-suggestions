@@ -9,7 +9,8 @@ test("should have the right text in the headline", async ({ page }) => {
     /Internet Plans For You/
   );
   setupUserway({
-    screenshots: true,
+    issueScreenshots: true,
+    detailedScreenshots: true,
     printViolationsTable: false,
   });
   await userwayAnalysis(page, {
