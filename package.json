@@ -10,8 +10,8 @@
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "@types/node": "^20.11.30",
-    "@userway/a11y-cypress": "^0.0.20",
-    "@userway/a11y-playwright": "^0.0.14",
+    "@userway/a11y-cypress": "^0.0.26",
+    "@userway/a11y-playwright": "^0.0.21",
     "@userway/cicd-cli": "^0.0.159",
     "cypress": "^13.3.3",
     "cypress-each": "1.14.0",
@@ -21,6 +21,7 @@
     "typescript": "^5.0.2"
   },
   "dependencies": {
+    "@playwright/test": "^1.49.0",
     "jimp": "^1.6.0"
   }
 }
