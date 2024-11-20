@@ -26,7 +26,7 @@ jobs:
           npx playwright install chromium
           npm run test:playwright
       - name: UserWay Accessibility Analysis
-        uses: UserWayOrg/cicd-action@main #`main` or `qa`, depending on what env you need
+        uses: UserWayOrg/cicd-action@qa #`main` or `qa`, depending on what env you need
         with:
           token: ${{ secrets.USERWAY_TOKEN }}
           report_paths: "./uw-a11y-reports"
