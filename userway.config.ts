@@ -3,6 +3,5 @@ export default {
   organization: "ivan-haliurov-userway-org",
   project: "test-website-1-mirko-github",
   reportPaths: ["./uw-a11y-reports"],
-  server: "https://api.qa.userway.dev",
   token: "qnzrdzkyrurkppys7knx6rvadgmb5uixkqxiu4b5",
 } satisfies Config;
