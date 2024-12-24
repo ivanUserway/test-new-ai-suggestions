@@ -1,8 +1,9 @@
 import type { Config } from "@userway/cicd-cli";
 export default {
-  organization: "ivan-haliurov-userway-org",
-  project: "test-website-1-mirko-github",
-  reportPaths: ["./uw-a11y-reports"],
+  organization: "ivan-haliurov-levelaccess-com-njypp",
+  project: "mirko-test",
 
-  token: "qnzrdzkyrurkppys7knx6rvadgmb5uixkqxiu4b5",
+  reportPaths: ["./uw-a11y-reports"],
+  server: "https://api.qa.userway.dev",
+  token: "txmlsnxslpj7hnhuwz0bjaulch0rppqv3ivllh4b",
 } satisfies Config;
