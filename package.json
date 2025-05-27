@@ -12,7 +12,7 @@
     "@types/node": "^20.11.30",
     "@userway/a11y-cypress": "^0.0.26",
     "@userway/a11y-playwright": "^0.0.21",
-    "@userway/cicd-cli": "^0.0.160",
+    "@userway/cicd-cli": "^0.1.2",
     "cypress": "^13.3.3",
     "cypress-each": "1.14.0",
     "express": "^4.19.2",
