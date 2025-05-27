@@ -4,7 +4,7 @@ import { setupUserway, userwayAnalysis } from "@userway/a11y-playwright";
 test("should have the right text in the headline", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page.locator(".headline")).toBeVisible();
+  await expect(page.locator(".header_block")).toBeVisible();
   setupUserway({
     issueScreenshots: true,
     detailedScreenshots: true,
