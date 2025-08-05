@@ -6,7 +6,7 @@ test("should have the right text in the headline", async ({ page }) => {
 
   await expect(page.locator("#logoLink")).toBeVisible();
   setupUserway({
-    issueScreenshots: false,
+    issueScreenshots: true,
     detailedScreenshots: true,
     printViolationsTable: false,
   });
