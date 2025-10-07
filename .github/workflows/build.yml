@@ -16,17 +16,19 @@ jobs:
 
       - name: Install npm packages
         run: |
-          npm install
+          npm ci
           nohup npm run dev > output.log 2>&1 &
           sleep 5
           curl -I http://localhost:1342/
+        env:
+          CLOUDSMITH_TOKEN: ${{ secrets.CLOUDSMITH_TOKEN }}
 
       - name: Run Playwright tests
         run: |
           npx playwright install chromium
           npm run test:playwright
-      - name: UserWay Accessibility Analysis
-        uses: UserWayOrg/cicd-action@dev #`main` or `qa`, depending on what env you need
-        with:
-          token: ${{ secrets.USERWAY_TOKEN }}
-          report_paths: "./uw-a11y-reports"
+
+      - name: Level CI Accessibility Analysis
+        uses: levelaccess/level-ci@dev
+        env:
+          LEVEL_CI_TOKEN: ${{ secrets.LEVEL_CI_TOKEN }}
