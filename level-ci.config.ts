@@ -1,8 +1,8 @@
-import type { Config } from "@userway/cicd-cli";
+import type { Config } from "@level-ci/cli";
 export default {
-  organization: "ivan-haliurov-7-userway-org",
+  organization: "ivan-haliurov-levelaccess-com-hspeq",
   project: "test-new-ai-suggestions",
-  token: "am5rj4fg2xsjdqylvrme61exsfxqrigt4gr29liw",
-  server: "https://api.qa.userway.dev", //change
-  reportPaths: ["./uw-a11y-reports"],
+  token: "9oaxiislzdxdfwh5dyt7txvvddxdtqinr2huers4",
+  server: "https://api.dev.userway.dev", //change
+  reportPaths: ["./level-ci-reports"],
 } satisfies Config;
