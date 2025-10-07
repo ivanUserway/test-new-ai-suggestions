@@ -1,3 +1,3 @@
-import { setupUserway } from "@userway/a11y-cypress";
+import { levelSetup } from "@level-ci/a11y-cypress";
 
-setupUserway({ level: "AAA", screenshots: true, strict: false });
+levelSetup({});
